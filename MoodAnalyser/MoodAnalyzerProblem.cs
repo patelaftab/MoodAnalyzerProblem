@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MoodAnalyser;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static MoodAnalyser.CustomeException;
 
 namespace MoodAnalyzer
 {
@@ -24,7 +26,7 @@ namespace MoodAnalyzer
             }
             catch(NullReferenceException)
             {
-                return "Happy";
+                throw new CustomeException(CustomeExceptionType.NullMood, "Please do not Enter the Null Input");
             }
         }
         
