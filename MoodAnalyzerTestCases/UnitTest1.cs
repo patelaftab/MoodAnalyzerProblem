@@ -11,6 +11,13 @@ namespace MoodAnalyzerTestCases
             string result = moodAnalyzer.AnalyzeMood();
             Assert.AreEqual(result, "Sad");
         }
+        [Test]
+        public void GivenAnyMood_WhenAnalyzed_ShouldReturnHappy()
+        {
+            MoodAnalyzerProblem moodAnalyzer = new MoodAnalyzerProblem("Im In Any Mood");
 
+            string result = moodAnalyzer.AnalyzeMood();
+            Assert.AreEqual(result, "Happy");
+        }
     }
 }
