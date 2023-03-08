@@ -40,5 +40,18 @@ namespace MoodAnalyzerTestCases
                 Assert.AreEqual("Please do not Enter the Null Input", obj.Message);
             }
         }
+        [Test]
+        public void GivenEmptyMood_ThrowMoodAnalysisException_EmptyMessage()
+        {
+            MoodAnalyzerProblem moodAnalyzer = new MoodAnalyzerProblem("");
+            try
+            {
+                string result = moodAnalyzer.AnalyzeMood();
+            }
+            catch (CustomeException obj)
+            {
+                Assert.AreEqual("Please do not Enter the empty Input", obj.Message);
+            }
+        }
     }
 }
