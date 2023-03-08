@@ -1,3 +1,4 @@
+using MoodAnalyser;
 using MoodAnalyzer;
 namespace MoodAnalyzerTestCases
 {
@@ -23,10 +24,21 @@ namespace MoodAnalyzerTestCases
         public void GivenNullMood_WhenAnalyzed_ShouldReturnHappy()
         {
             MoodAnalyzerProblem moodAnalyzer = new MoodAnalyzerProblem(null);
-
-            string result = moodAnalyzer.AnalyzeMood();
-            Assert.AreEqual(result, "Happy");
+                string result = moodAnalyzer.AnalyzeMood();
+                Assert.AreEqual(result, "Happy");
         }
-
+        [Test]
+        public void GivenNullMood_ThrowMoodAnalysisException_NullMessage()
+        {
+            MoodAnalyzerProblem moodAnalyzer = new MoodAnalyzerProblem(null);
+            try
+            {
+                string result = moodAnalyzer.AnalyzeMood();
+            }
+            catch (CustomeException obj)
+            {
+                Assert.AreEqual("Please do not Enter the Null Input", obj.Message);
+            }
+        }
     }
 }

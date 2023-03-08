@@ -26,7 +26,7 @@ namespace MoodAnalyzer
             }
             catch(NullReferenceException)
             {
-                throw new CustomeException(CustomeExceptionType.NullMood, "Please do not Enter the Null Input");
+                throw new CustomeException(CustomeExceptionType.NULL_MOOD, "Please do not Enter the Null Input");
             }
         }
         

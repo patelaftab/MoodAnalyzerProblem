@@ -10,7 +10,7 @@ namespace MoodAnalyser
     {
         public enum CustomeExceptionType
         {
-            NullMood,
+            NULL_MOOD,
         }
         public CustomeExceptionType Type;
         public CustomeException(CustomeExceptionType Type, string message) : base(message)
