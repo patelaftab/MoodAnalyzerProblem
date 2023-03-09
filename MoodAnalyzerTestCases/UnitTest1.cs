@@ -53,5 +53,6 @@ namespace MoodAnalyzerTestCases
                 Assert.AreEqual("Please do not Enter the empty Input", obj.Message);
             }
         }
+
     }
 }
