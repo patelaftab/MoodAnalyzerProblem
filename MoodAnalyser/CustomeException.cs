@@ -11,6 +11,9 @@ namespace MoodAnalyser
         public enum CustomeExceptionType
         {
             NULL_MOOD,
+            EMPTY_MOOD,
+            NO_SUCH_CLASS,
+            NO_SUCH_METHOD,
         }
         public CustomeExceptionType Type;
         public CustomeException(CustomeExceptionType Type, string message) : base(message)

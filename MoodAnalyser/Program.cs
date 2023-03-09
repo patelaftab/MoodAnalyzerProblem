@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoodAnalyser;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,9 @@ namespace MoodAnalyzer
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Mood Analyzer Problem");
-            MoodAnalyzerProblem moodAnalyzerProblem = new MoodAnalyzerProblem("I Am In Sad Mood");
-            moodAnalyzerProblem.AnalyzeMood();
+            //MoodAnalyzerProblem moodAnalyzerProblem = new MoodAnalyzerProblem("I Am In Sad Mood");
+            //moodAnalyzerProblem.AnalyzeMood();
+            MoodAnalyzerFactory.CreateMoodAnalyser("MoodAnalizer.MoodAnalizerClass", "MoodAnalizerClass");
             Console.ReadLine();
         }
     }

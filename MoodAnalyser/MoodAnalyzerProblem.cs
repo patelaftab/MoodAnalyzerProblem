@@ -11,6 +11,10 @@ namespace MoodAnalyzer
     public class MoodAnalyzerProblem
     {
         string message;
+        public MoodAnalyzerProblem()
+        {
+            //message = null;
+        }
         public MoodAnalyzerProblem(string message)
         {
             this.message = message;
@@ -19,6 +23,8 @@ namespace MoodAnalyzer
         {
             try
             {
+                if (message.Equals(string.Empty))
+                    throw new CustomeException(CustomeExceptionType.EMPTY_MOOD, "Please do not Enter the empty Input");
                 if (message.Contains("Sad"))
                     return "Sad";
                 else
